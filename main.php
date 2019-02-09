@@ -8,12 +8,27 @@
 	<script src="../../jquery.min.js"></script>
 
 	<?php
+
+		$uid=$_GET['uid'];
+		$pass=$_GET['pass'];
+
 		$con = mysqli_connect('localhost','root','');
 		mysqli_select_db($con,'hack3');
 
-		$qre = "select * from products";
+		$qre = "select pid, pname, pdetails,pprice,ppic,products.id, name,email,mob,addr from products, users where products.id=users.id";
+
+		$uss = "select * from users where '$uid' = id";
 
 		$res = mysqli_query($con,$qre);
+		$user = mysqli_query($con,$uss);
+		$me = mysqli_fetch_assoc($user);
+
+		$meid = $me['id'];
+
+		$mefind ="select orders.pid,pname,pprice from orders,users,products where buyer= '$meid' and orders.pid=products.pid and users.id='$meid'";
+
+		$pro = mysqli_query($con,$mefind);
+
 
 
 
@@ -34,9 +49,24 @@
 			<h2>NITCAOLX <small>get what you want</small></h2>
 			<div class="usr">
 				<i class="fa fa-plus fa-lg"></i>
-				<i class="fa fa-shopping-cart fa-lg"> </i>
-				<span>Rohit Kaushal</span>
+
+				<div class="dropdown" style="display:inline-block;">
+					<i class="fa fa-shopping-cart fa-lg dropdown-toggle" type="button" area-haspopup="true" aria-expanded="false" data-toggle="dropdown" id="dropdownMenuButton" > </i>
+
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
+						
+						<?php while($prod=mysqli_fetch_assoc($pro)) { ?>
+						<div class="dropdown-item" style="padding: 20px; width: 300px;"><?php echo $prod['pname']."   ".$prod['pprice']; ?> </div>
+
+						<?php } ?>
+					
+
+					</div>
+				</div>
+
+				<span> <?php echo $me['name'] ?> </span>
 				<span class="dp"></span>
+
 			</div>
 		</div>
 
@@ -79,8 +109,19 @@
 					<h4> <?php echo $row['pname'] ?> </h4>
 					<p> <?php echo $row['pdetails'] ?> </p>
 					<div class="price">&#8377; <?php echo $row['pprice'] ?> </div>
+
+					<i class="fa fa-cart-plus fa-2x"></i>
+
+					<div class="contacth">
+					<h4>Please Contact <small>#<?php echo $row['pid'] ?></small></h4>
+					<span> <?php echo $row['name'] ?> </span><br>
+					<span> <?php echo $row['email'] ?> </span><br>
+					<span> <?php echo $row['mob'] ?> </span><br>
+					<span> <?php echo $row['addr'] ?> </span><button class="btn btn-success" style="margin: 5px 3px 5px 30px;"> Buy</button>
 				</div>
-				<i class="fa fa-cart-plus fa-2x"></i>
+				</div>
+				
+
 			</div>
 
 
@@ -109,42 +150,29 @@
 
 
 <script type="text/javascript">
-		
-	$(function(){
+		$(function(){
 
-		$(".fa-cart-plus").click(function(){
-			if($(this).parent().css("position")=="relative"){
-					$(".item").css("filter","blur(2px)");
-					$(this).parent().css({
-						"position":"fixed",
-						"z-index":"3",
+			$(".fa-cart-plus").click(function(){
 
-						"top":"30%",
-						"left":"20%",
-						"transform": "scale(2)",
-						"filter":"blur(0px)"
-					});
-			}
+				$(this).next().toggleClass("contacts");
+			});
 
-			else
-			{
-				$(".item").css("filter","blur(2px)");
-					$(this).parent().css({
-						"position":"relative",
-						"z-index":"1",
-						"top":"0",
-						"left":"0",
-						"transform": "scale(1)",
-						"filter":"blur(0px)"
-					});
 
-					$(".item").css("filter","blur(0px)");
+			$("#dropdownMenuButton").click(function(){
+				if($(".dropdown-menu").css("display")=="none")
+				{
+					$(".dropdown-menu").css("display","block");	
+				}
 
-			}
+				else
+				{
+					$(".dropdown-menu").css("display","none");
+				}
+			});
+
 
 		});
 
-	});
 
 </script>
 

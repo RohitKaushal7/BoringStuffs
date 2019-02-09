@@ -1,6 +1,7 @@
 *{
 	box-sizing: border-box;
 	transition: all 0.5s;
+	font-family: montserrat,roboto,arial;
 
 }
 
@@ -164,6 +165,7 @@ footer > .container
 	background: #fffa;
 	width: 100%;
 	padding: 5px 10px;
+
 }
 
 .item .price
@@ -194,6 +196,18 @@ footer > .container
 {
 	background: #076a;
 }
+
+
+.contacth
+{
+	display: none;
+}
+
+.contacts
+{
+	display: block;
+}
+
 
 
 @keyframes slide

@@ -9,7 +9,6 @@
 	mysqli_select_db($con,'hack3');
 
 	$find = "select * from users where  email = '$user'";
-
 	$res = mysqli_query($con,$find);
 
 
@@ -30,7 +29,7 @@
 		if($pass == $row['pass'])
 			{
 				
-				header('refresh:0.1; url=main.php');
+				header('refresh:0.1; url=main.php?uid='.$row['id'].'&pass='.$pass);
 			}
 		else
 			{
