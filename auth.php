@@ -1,13 +1,8 @@
 <?php
 
-	header('Content-type: application/json');
-
-	include_once $_SERVER['DOCUMENT_ROOT'] . '/inc/autoload.php';
-	include_once $_SERVER['DOCUMENT_ROOT'] . '/inc/db.php';
-
 	
-	$user = $_POST['uid'];
-	$pass = $_POST['pass'];
+	$user = $_GET['uid'];
+	$pass = $_GET['pass'];
 
 	$con=mysqli_connect('localhost','root','');
 
@@ -15,19 +10,36 @@
 
 	$find = "select * from users where  id = $user";
 
-	$res=mysql_query($con,$find);
+	$res=mysqli_query($con,$find);
+
+	$row = mysqli_fetch_ASSOC($res);
 
 	if(mysqli_num_rows($res)==0)
 	{
-		http_response_code(404);
+		echo '
+
+				Not Found
+
+
+			';
+			header('refresh:1; url=login.php');;
 	}
 
 	else
 	{
-		if($pass == $res['pass'])
-			http_response_code(200);
+		if($pass == $row['pass'])
+			echo "welcome".$row['name'];
 		else
-			http_response_code(500);
+			{
+				echo '
+
+						Wrong Password
+
+
+					';
+				header('refresh:1; url=login.php');
+			}
+
 	}
 
 
