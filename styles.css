@@ -1,0 +1,29 @@
+input
+{
+	margin: 10px 0px;
+	background: red;
+	display: inline-block;
+
+}
+body
+{
+	background: url(./pics/sky.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.cvr
+{
+	background: #eeec ;
+	transform: translate(100px,0);
+	box-shadow: -10px 0px 20px 2px ;
+	border-radius: 20px 0 0 0px;
+
+}
+
+#err
+{
+	color: #f11e;
+	padding: 10px;
+	display: none;
+}

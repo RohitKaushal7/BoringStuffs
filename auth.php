@@ -10,11 +10,10 @@
 
 	$find = "select * from users where  id = $user";
 
-	$res=mysqli_query($con,$find);
+	$res = mysqli_query($con,$find);
 
-	$row = mysqli_fetch_ASSOC($res);
 
-	if(mysqli_num_rows($res)==0)
+	if( mysqli_num_rows($res) == 0)
 	{
 		echo '
 
@@ -27,6 +26,7 @@
 
 	else
 	{
+		$row = mysqli_fetch_assoc($res);
 		if($pass == $row['pass'])
 			echo "welcome".$row['name'];
 		else
