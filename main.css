@@ -1,0 +1,156 @@
+*{
+	box-sizing: border-box;
+	transition: all 0.5s;
+
+}
+
+.ext
+{
+	margin: 0;
+	padding: 0;
+	background: #dddd;
+	min-width: 770px;
+}
+
+i 
+{ 
+	transition: all 0.3s;
+	margin: auto 20px;
+}
+
+i:hover
+{
+	color: #484c;
+}
+
+i:active
+{
+	transform: translate(-10px,0);
+}
+
+
+html
+{
+	background-color: #aaae;
+}
+
+
+.dp
+{
+	border-radius: 50%;
+	border: 2px solid #fffe;
+	box-shadow: 0 0 20px 1px #0007;
+	width: 50px;
+	height: 50px;
+	background: url(./Pics/dp3.jpg);
+	background-size: cover;
+	float: right;
+	display: inline-block;
+	margin: 15px 20px;
+	transition: all 0.5s ease;
+}
+
+.dp:hover
+{
+	transform: rotate(360deg);
+}
+
+.usr
+{
+	display: inline-block;
+	background:;
+	float: right;
+	background:;
+	line-height: 80px;
+	padding: 0 20px;
+	cursor: pointer;
+	font-family: montserrat;
+}
+
+.usr > span
+{
+	font-weight: 600;
+	margin: 15px 10px;
+}
+
+h2
+{
+	width:50%;
+	display: inline-block;
+	background: ;
+}
+
+header
+{
+	box-shadow: 0 10px 20px 2px #aaaa;
+	z-index: 10;
+	position: sticky;
+	top: 0;
+	background: white;
+	border-bottom: 3px solid #4449;
+
+}
+
+footer > .container
+{
+	height: 200px;
+	background: #000a;
+	position: relative;
+}
+
+
+
+
+.cont
+{
+	min-height: 500px;
+	background: #eee9;
+	padding:3em;
+	font-family: montserrat;
+}
+
+.cont > h1
+{
+	padding: 10px 20px;
+	border-bottom: 2px solid #5555;
+	color: #2196F3;
+}
+
+.cont>h1> small
+{
+	color: #E91E63;
+}
+
+
+.item-box
+{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+
+}
+
+.item
+{
+	position: relative;
+	display: inline-block;
+	min-width: 250px;
+	min-height: 300px;
+	background: #fff;
+	box-shadow: inset 0 0px 20px 5px #5555; 
+	margin: 20px 10px;
+	overflow: hidden;
+	
+	border-radius: 8px;
+
+}
+
+.item:hover
+{
+	box-shadow: inset 0 0px 20px 0px #5559; 
+}
+
+.item > details
+{
+
+}

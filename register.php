@@ -16,7 +16,7 @@
 		<hr>
 		<br>
 		<div class="container ">
-			<form id="myform" action="#" class="form-inline">
+			<form id="myform" action="regprocess.php" method="get" class="form-inline">
 
 					<fieldset> <legend>Your Details</legend>
 						<br><label for="uname">Name:</label><br>	

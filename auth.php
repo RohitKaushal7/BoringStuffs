@@ -8,7 +8,7 @@
 
 	mysqli_select_db($con,'hack3');
 
-	$find = "select * from users where  id = $user";
+	$find = "select * from users where  email = '$user'";
 
 	$res = mysqli_query($con,$find);
 
@@ -28,7 +28,10 @@
 	{
 		$row = mysqli_fetch_assoc($res);
 		if($pass == $row['pass'])
-			echo "welcome".$row['name'];
+			{
+				
+				header('refresh:0.1; url=main.php');
+			}
 		else
 			{
 				echo '

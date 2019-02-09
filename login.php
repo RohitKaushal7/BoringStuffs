@@ -7,7 +7,7 @@
 </head>
 
 
-<body>
+<body style="background: none;">
 <div class="container">
 
 	<blockquote>
@@ -21,7 +21,7 @@
 			<div class="form-group">
 
 				<label for="uid">Id:</label>
-				<input type="number" required name="uid" id="uid" class="form-control">
+				<input type="email" required name="uid" id="uid" class="form-control">
 
 				<label for="pass">Password:</label>
 				<input type="password" name="pass" required  id="pass" class="form-control">
