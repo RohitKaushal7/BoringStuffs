@@ -1,0 +1,93 @@
+body
+{
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+
+
+.cvr
+{
+	background: linear-gradient(#0006,#0009), url('./pics/back3.jpg');	
+	height: 760px;
+	background-size: cover;
+	margin: 0 0 0 0;
+	padding: 20px;
+	background-attachment: fixed;
+	display: fixed;
+	top: 0;
+	left: 0;
+}
+
+.cont
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 600px;
+	background: ;
+	animation: slideup 1s ease forwards;
+}
+
+.bdy
+{
+	width: 60%;
+	height: 600px;
+	display: block;
+	text-align: center;
+	font-family: montserrat, roboto, arial;
+	font-size: 6em;
+	font-weight: 500;
+	color:#ffff;
+
+	text-shadow: -2px -2px 3px #002a;
+	transform: translate(0,200px);
+	
+
+}
+
+@keyframes slideup
+{
+	from{ transform: translate(0,100px); opacity: 0; }
+	to{ transform: translate(0px,-50px); opacity: 1; }
+}
+
+
+
+
+
+.sll{
+	background:linear-gradient(to right, #eeeeee,#eeeeee,#ffeb3b,#03a9f4,#f441a5);
+	background-size: 700%;
+	transition: all 1s;
+}
+.sll:hover{
+	background-position: 100%;
+	border-radius: 20px;
+	color: white;
+}
+
+.km{cursor: pointer;
+	font-size: 17px;
+	background-color: #eeeeee;
+	width: 120px;
+	height: 40px;
+	display: block;
+	text-align: center;
+	line-height: 40px;
+	margin: 20px auto;
+	font-weight: 700;
+	color: black;
+	border-radius: 20px;
+	transition: all 0.5s;
+
+}
+
+/*.km:hover{
+
+	border-radius: 0px;
+	box-shadow: 0px 2px 70px 5px grey;
+}
+*/
+
+
+

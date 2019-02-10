@@ -8,15 +8,23 @@
 </head>
 <body>
 
+	<div style="position: fixed; top: 100px; font-family: montserrat; font-weight: 600; left: 100px; color: white; font-size: 8em; text-shadow: 1px 1px 3px #333a;">
+		<span>Sign Up</span><br>
+		<span style="font-size: 0.4em; transform:translate(100px,-400px);">create your account</span>
+	</div>
+
+
 <div class="container cvr">
+
+	
 	
 	<blockquote>
 		
 		<h1>Sign up</h1>
-		<hr>
+		<hr color=red;>
 		<br>
-		<div class="container ">
-			<form id="myform" action="regprocess.php" method="get" class="form-inline">
+		<div class="container box">
+			<form id="myform" action="regprocess.php" method="get"  class="form-inline">
 
 					<fieldset> <legend>Your Details</legend>
 						<br><label for="uname">Name:</label><br>	
@@ -32,19 +40,20 @@
 
 					<fieldset>	<legend>Contact Information</legend>
 						<br><label for="mob">Mobile No.</label><br>	
-						<input type="phone" class="form-control" name="mob" id="mob">							
+						<input type="phone" style="width: 40%; min-width: 400px;" class="form-control" name="mob" id="mob">							
 						<br><label for="email">Email:</label><br>	
-						<input type="email" class="form-control" name="email" id="email"> <br>
+						<input type="email" style="width: 40%; min-width: 400px;" class="form-control" name="email" id="email"> <br>
 
 						<br><label for="pass">Password:</label><br>	
-						<input type="password" class="form-control" name="pass" id="pass">
+						<input type="password" style="width: 40%; min-width: 400px;" class="form-control" name="pass" id="pass">
 
 						<br><label for="cpass"> Confirm Password:</label><br>	
-						<input type="password" class="form-control" onchange="checkpasslive();" name="cpass" id="cpass"> <span id="err">Paswords didn't match</span>
+						<input type="password" style="width: 40%; min-width: 400px;" class="form-control" onchange="checkpasslive();" name="cpass" id="cpass"> <span id="err">Paswords didn't match</span>
 					</fieldset>
 
 						<label for="pic">DP:</label><br>	
 						<input type="file" class="form-control" name="pic" id="pic">
+						<br>
 
 						<input type="button" class="btn btn-success" name="subm" onclick="sub();" value="Submit">												
 			</form>

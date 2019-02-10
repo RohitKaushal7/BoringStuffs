@@ -16,11 +16,11 @@
 	{
 		echo '
 
-				Not Found
+				<div style="color: #f41; font-size: 5em; display: flex; justify-content: center;align-items: center; height: 650px; font-family: montserrat,roboto,arial;"> Not Found</div>
 
 
 			';
-			header('refresh:1; url=login.php');;
+			header('refresh:2; url=login.html');;
 	}
 
 	else
@@ -35,11 +35,11 @@
 			{
 				echo '
 
-						Wrong Password
+						<div style="color: #f41; font-size: 5em; display: flex; justify-content: center;align-items: center; height: 650px; font-family: montserrat,roboto,arial;"> Wrong Password</div>
 
 
 					';
-				header('refresh:1; url=login.php');
+				header('refresh:2; url=login.html');
 			}
 
 	}

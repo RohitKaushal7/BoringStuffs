@@ -46,9 +46,9 @@
 
 	<header class="header">
 		<div class="container">
-			<h2>NITCAOLX <small>get what you want</small></h2>
+			<h2>BoringStuffs.com <small>get what you want</small></h2>
 			<div class="usr">
-				<i class="fa fa-plus fa-lg"></i>
+				<a href="add.php?uid=<?php echo $me['id']; ?>&pass=<?php echo $me['pass']; ?>"<i class="fa fa-plus fa-lg"></i></a>
 
 				<div class="dropdown" style="display:inline-block;">
 					<i class="fa fa-shopping-cart fa-lg dropdown-toggle" type="button" area-haspopup="true" aria-expanded="false" data-toggle="dropdown" id="dropdownMenuButton" > </i>
@@ -56,16 +56,17 @@
 					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
 						
 						<?php while($prod=mysqli_fetch_assoc($pro)) { ?>
-						<div class="dropdown-item" style="padding: 20px; width: 300px;"><?php echo $prod['pname']."   ".$prod['pprice']; ?> </div>
+						<div class="dropdown-item" style="padding: 20px; width: 300px;"><?php echo '<b>'.$prod['pname'].'</b>'."   ".$prod['pprice']; ?> </div>
 
 						<?php } ?>
 					
 
 					</div>
 				</div>
-
-				<span> <?php echo $me['name'] ?> </span>
-				<span class="dp"></span>
+				<a href="profile.php?id=<?php echo $me['id']; ?>">
+					<span> <?php echo $me['name'] ?> </span>
+					<span class="dp"></span>
+				</a>
 
 			</div>
 		</div>
@@ -117,7 +118,7 @@
 					<span> <?php echo $row['name'] ?> </span><br>
 					<span> <?php echo $row['email'] ?> </span><br>
 					<span> <?php echo $row['mob'] ?> </span><br>
-					<span> <?php echo $row['addr'] ?> </span><button class="btn btn-success" style="margin: 5px 3px 5px 30px;"> Buy</button>
+					<span> <?php echo $row['addr'] ?> </span><button class="btn btn-success" style="margin: 5px 3px 5px 30px;" > Buy</button>
 				</div>
 				</div>
 				
@@ -138,7 +139,28 @@
 	<footer>
 		<div class="container">
 			
+			<div class="row">
+				<div class="col-md-6"  style="color: white; transform: translate(100px,20px);">
+					<h4>Contact Us</h4>
+					<ul>
+						<li>7018188103</li>
+						<li>rohitkk252550@gmail.com</li>
+					</ul>
+				</div>
+				
+				<div class="col-md-6"  style="color: white; transform: translate(100px,20px);">
+					<h4 style="transform: translate(43px);">Follow us on</h4>
+					<ul>
+						<li style="display: inline-block;"><i class="fab fa-instagram"></i>rohit_kaushal.25</li><br>
+						<li style="display: inline-block;"><i class="fab fa-facebook"></i></li><br>
+						<li style="display: inline-block;"><i class="fab fa-github"></i></li>
+					</ul>
+				</div>
 
+			</div>
+			<div class="row"  style="color: #aaae;"><h4 align="center">Developed By</h4>
+				<div class="col-md-12" align="center">&copy;<br>Rohit Kaushal, Nishit Attrey, Prateek Sharma, Piyush Chauhan</div>
+			</div>
 		</div>
 
 		
@@ -176,6 +198,15 @@
 
 </script>
 
+
+
+<!-- <script type="text/javascript">
+	
+	var items = document.getElementsByClassName("item");
+	var i = 0;
+	var x= setInterval(function(){ items[i++].style.display="inline-block"; if (i=items.length) clearInterval(x);},100);
+
+</script> -->
 
 
 

@@ -1,3 +1,9 @@
+*
+{
+	
+}
+
+
 input
 {
 	margin: 10px 0px;
@@ -7,17 +13,18 @@ input
 }
 body
 {
-	background: url(./pics/sky.jpg);
+	background: linear-gradient(#000a,#0009),url("./pics/back2.jpg");
 	background-size: cover;
+	box-shadow: inset 10px  0px 30px 15px #010c;
 	background-attachment: fixed;
 }
 
 .cvr
 {
-	background: #eeec ;
+	background: #f5f5f5 ;
 	transform: translate(100px,0);
 	box-shadow: -10px 0px 20px 2px ;
-	border-radius: 20px 0 0 0px;
+	border-radius: 0px 0 0 0px;
 
 }
 
@@ -26,4 +33,25 @@ body
 	color: #f11e;
 	padding: 10px;
 	display: none;
+}
+
+.box
+{
+	max-width: 600px;
+}
+
+.cvr
+{
+	max-width: 600px;
+	float: right;
+}
+
+legend
+{
+	width: 80%;
+}
+
+blockquote
+{
+	border-color: #FF5722;
 }

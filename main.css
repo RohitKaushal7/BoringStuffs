@@ -5,6 +5,16 @@
 
 }
 
+a:link
+{
+	text-decoration: none;
+
+}
+
+a:link:hover
+{
+	text-decoration: none;	
+}
 
 
 .ext
@@ -19,6 +29,10 @@ i
 { 
 	transition: all 0.3s;
 	margin: auto 20px;
+}
+footer i
+{
+	margin:0 5px;
 }
 
 i:hover
@@ -70,7 +84,7 @@ html
 	font-family: montserrat;
 }
 
-.usr > span
+.usr  span
 {
 	font-weight: 600;
 	margin: 15px 10px;
@@ -99,6 +113,7 @@ footer > .container
 	height: 200px;
 	background: #000a;
 	position: relative;
+	border-top: 2px
 }
 
 

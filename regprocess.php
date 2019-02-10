@@ -20,7 +20,13 @@
 
 	$res = mysqli_query($con,$find);
 
-	echo "success";
+	echo '
+
+			<div style="color: #3f2; font-size: 5em; display: flex; justify-content: center;align-items: center; height: 650px; font-family: montserrat,roboto,arial;"> Success</div>
+
+		';
+	header("refresh:2; url=login.html");
+
 	}
 
 	else
