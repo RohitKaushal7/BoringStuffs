@@ -56,7 +56,7 @@
 					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
 						
 						<?php while($prod=mysqli_fetch_assoc($pro)) { ?>
-						<div class="dropdown-item" style="padding: 20px; width: 300px;"><?php echo '<b>'.$prod['pname'].'</b>'."   ".$prod['pprice']; ?> </div>
+						<div class="dropdown-item" style="padding: 20px; width: 300px;"><?php echo '<b style="font-size:1.1em;">'.$prod['pname'].'</b>'."   &nbsp;&nbsp;&nbsp;   &#8377;".$prod['pprice']; ?><hr> </div>
 
 						<?php } ?>
 					
@@ -118,7 +118,7 @@
 					<span> <?php echo $row['name'] ?> </span><br>
 					<span> <?php echo $row['email'] ?> </span><br>
 					<span> <?php echo $row['mob'] ?> </span><br>
-					<span> <?php echo $row['addr'] ?> </span><button class="btn btn-success" style="margin: 5px 3px 5px 30px;" > Buy</button>
+					<span> <?php echo $row['addr'] ?> </span><button class="btn btn-success" style="margin: 5px 3px 5px 30px;" onclick="window.location= 'order.php?seller=<?php echo $row['id'] ?>&buyer=<?php echo $meid ?>&pid=<?php echo $row['pid'] ?>';""> Buy</button>
 				</div>
 				</div>
 				
