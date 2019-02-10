@@ -4,6 +4,7 @@
 	$seller = $_GET['seller'];
 	$buyer = $_GET['buyer'];
 	$pid = $_GET['pid'];
+	$pass = $_GET['pass'];
 
 	
 
@@ -20,7 +21,7 @@
 
 	';
 
-	header("refresh:2; url=login.html");
+	header("refresh:2; url=main.php?uid=".$buyer."&pass=".$pass."");
 
 
 

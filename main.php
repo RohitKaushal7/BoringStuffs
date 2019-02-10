@@ -118,7 +118,7 @@
 					<span> <?php echo $row['name'] ?> </span><br>
 					<span> <?php echo $row['email'] ?> </span><br>
 					<span> <?php echo $row['mob'] ?> </span><br>
-					<span> <?php echo $row['addr'] ?> </span><button class="btn btn-success" style="margin: 5px 3px 5px 30px;" onclick="window.location= 'order.php?seller=<?php echo $row['id'] ?>&buyer=<?php echo $meid ?>&pid=<?php echo $row['pid'] ?>';""> Buy</button>
+					<span> <?php echo $row['addr'] ?> </span><button class="btn btn-success" style="margin: 5px 3px 5px 30px;" onclick="window.location= 'order.php?seller=<?php echo $row['id'] ?>&buyer=<?php echo $meid ?>&pid=<?php echo $row['pid'] ?>&pass=<?php echo $me['pass'] ?>';""> Buy</button>
 				</div>
 				</div>
 				
