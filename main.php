@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Welcome</title>
+	<title>BooringStuffs</title>
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<link rel="stylesheet" type="text/css" href="../../bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../../fontawesome-free-5.6.3-web\css/all.min.css">
@@ -140,7 +140,7 @@
 		<div class="container">
 			
 			<div class="row">
-				<div class="col-md-6"  style="color: white; transform: translate(100px,20px);">
+				<div class="col-sm-6"  style="color: white; transform: translate(100px,20px);">
 					<h4>Contact Us</h4>
 					<ul>
 						<li>7018188103</li>
@@ -148,12 +148,12 @@
 					</ul>
 				</div>
 				
-				<div class="col-md-6"  style="color: white; transform: translate(100px,20px);">
+				<div class="col-sm-6"  style="color: white; transform: translate(100px,20px);">
 					<h4 style="transform: translate(43px);">Follow us on</h4>
 					<ul>
 						<li style="display: inline-block;"><i class="fab fa-instagram"></i>rohit_kaushal.25</li><br>
-						<li style="display: inline-block;"><i class="fab fa-facebook"></i></li><br>
-						<li style="display: inline-block;"><i class="fab fa-github"></i></li>
+						<li style="display: inline-block;"><i class="fab fa-facebook"></i>facebook.com/rohit.kaushal.252550</li><br>
+						<li style="display: inline-block;"><i class="fab fa-github"></i>github.com/RohitKaushal7</li>
 					</ul>
 				</div>
 

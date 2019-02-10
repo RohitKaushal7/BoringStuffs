@@ -1,6 +1,7 @@
 *{
 	box-sizing: border-box;
 	font-family: montserrat,roboto;
+	
 }
 
 	.container
@@ -11,12 +12,15 @@
 	display: inline-block;
 	float: left;
 	height: 500px;
-	transform: translate(40px,-30px);
+	opacity: 0;
+	animation:slideup 1s ease 0.5s forwards;
 	margin:auto;
+	margin-left: 50px;
 	}
 .sub
 {
 	display: block;
+	margin-left: 50px;
 
 	
 }
@@ -334,4 +338,10 @@ body
 {
 	from{width: 90%;}
 	to{width:35%;}
+}
+
+@keyframes slideup
+{
+	from{ transform: translate(0,500px); opacity: 0; }
+	to{ transform: translate(0px,-10px); opacity: 1; }
 }

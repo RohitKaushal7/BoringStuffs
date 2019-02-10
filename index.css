@@ -1,14 +1,21 @@
+
 body
 {
 	margin: 0 0 0 0;
 	padding: 0 0 0 0;
+
+}
+
+::-webkit-scrollbar
+{
+	display: none;
 }
 
 
 .cvr
 {
-	background: linear-gradient(#0006,#0009), url('./pics/back3.jpg');	
-	height: 760px;
+	background: linear-gradient(#0009,#000a), url('./pics/back3.jpg');	
+	height: 770px;
 	background-size: cover;
 	margin: 0 0 0 0;
 	padding: 20px;
@@ -25,6 +32,7 @@ body
 	align-items: center;
 	height: 600px;
 	background: ;
+	transition: all 1s;
 	animation: slideup 1s ease forwards;
 }
 
@@ -38,7 +46,7 @@ body
 	font-size: 6em;
 	font-weight: 500;
 	color:#ffff;
-
+	transition: all 0.9s;
 	text-shadow: -2px -2px 3px #002a;
 	transform: translate(0,200px);
 	
@@ -64,6 +72,12 @@ body
 	background-position: 100%;
 	border-radius: 20px;
 	color: white;
+	width: 150px;
+}
+
+.sll:active
+{
+	width: 300px;
 }
 
 .km{cursor: pointer;
@@ -89,5 +103,22 @@ body
 }
 */
 
+#wc
+{
+	transition: all 0.5s;
+	transition-delay: 0.1s;
+}
+
+#site
+{
+	transition: all 1s;
+	transition-delay: 0.2s;
+}
+
+#des
+{
+	transition: all 1s;
+	transition-delay: 0.3s;
+}
 
 

@@ -13,16 +13,16 @@
 
 	<div class="container cont" id="aa">
 		<div class="bdy">
-			Welcome
-			<p style="font-size: 0.4em; color: #FFEB3B;">to BoringStuffs.com </p>
-			<p style="font-size: 0.2em; font-style: italic; font-weight: 200; text-shadow: none;"> 
-					What goes around comes around we won't give you the run-round <br>
+			<div id="wc">Welcome</div>
+			<p id="site" style="font-size: 0.4em; color: #FFEB3B;">to BoringStuffs.com </p>
+			<p id="des" style="font-size: 0.2em; font-style: italic; font-weight: 200; text-shadow: none;"> 
+					What goes around comes around, we won't give you the run-round <br>
 					second hand goods give a second run <br>
 					Any good? Hope all goes well. 
 			</p>
 
 			
-			<span class="km sll" style="text-shadow: none;" onclick="fn();">Explore</span>
+			<span class="km sll" id="bt"  style="text-shadow: none;"  onclick="fn();">Explore</span>
 		</div>
 	</div>
 	
@@ -30,12 +30,28 @@
 	
 	<script type="text/javascript">
 		var bdy = document.getElementById("aa");
+		var bt = document.getElementById("bt");
+
+		setTimeout(function(){bt.click();},5000);
 
 		 function fn()
 		 {
 		 	bdy.style.transform = "translate(0,-200px)";
-		 	setTimeout(function(){window.location="login.html";},1000);
+		 	setTimeout(function(){window.location="login.html";},600);
 		 }
+
+</script>
+<script>
+		 $(function(){
+		 	$(".sll").click(function(){
+		 		$(".sll").css("width","400px");
+		 		$("#wc").css("transform","translate(0,-300px)");
+		 		$("#site").css("transform","translate(0,-300px)");
+		 		$("#des").css("transform","translate(0,-300px)");
+		 		$(".sll").css("transform","translate(0,200px)");
+		 		$(".bdy").css("opacity","0");
+		 	});
+		 });
 
 	</script>
 
