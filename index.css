@@ -67,6 +67,7 @@ body
 	background:linear-gradient(to right, #eeeeee,#eeeeee,#ffeb3b,#03a9f4,#f441a5);
 	background-size: 700%;
 	transition: all 1s;
+
 }
 .sll:hover{
 	background-position: 100%;
@@ -122,3 +123,14 @@ body
 }
 
 
+@keyframes load {
+	from {background-position: 0%;}
+	to {background-position: 100%;}
+}
+
+#bar
+{
+	animation: load 10s ease;
+	opacity: 0.5;
+	background:#fffe;
+}

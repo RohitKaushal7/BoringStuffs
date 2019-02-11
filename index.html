@@ -25,14 +25,23 @@
 			<span class="km sll" id="bt"  style="text-shadow: none;"  onclick="fn();">Explore</span>
 		</div>
 	</div>
+
+	
+	
+
 	
 </div>
 	
+		<div id="bar" class="progress-bar" style="position: absolute; bottom:0; height: 5px;   width: 0%; transition: all 10s;"></div>
+
+
 	<script type="text/javascript">
 		var bdy = document.getElementById("aa");
 		var bt = document.getElementById("bt");
 
-		setTimeout(function(){bt.click();},5000);
+		setTimeout(function(){document.getElementById("bar").style.width="100%";},100);
+
+		setTimeout(function(){bt.click();},10000);
 
 		 function fn()
 		 {
