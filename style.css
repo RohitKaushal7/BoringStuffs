@@ -13,14 +13,14 @@
 	float: left;
 	height: 500px;
 	opacity: 0;
-	animation:slideup 1s ease 0.5s forwards;
+	animation:slideup 1s ease 1.1s forwards;
 	margin:auto;
-	margin-left: 50px;
+	margin-left: 40px;
 	}
 .sub
 {
 	display: block;
-	margin-left: 50px;
+	margin-left: 20px;
 
 	
 }
@@ -174,6 +174,7 @@
 			width: 15px;
 			border-radius:0 0 8px 8px;
 			position: relative;
+
 			 
 		}
 		.m{
@@ -302,15 +303,40 @@ body
 .bg1
 {
 	z-index: -1;
-	width: 35%;
+	width: 30%;
 
 	background:#03A9F4;
 	display: flex;
 	box-shadow: 10px  0px 30px 5px #010c;
 	transition: all 1s;
-	animation:swipe 1s ease;
-	border-right: 10px solid #3F51B5;
+	animation:swipe 1.5s ease;
+	/*border-right: 25px solid #3F51B5;*/
+	box-shadow: 3px 0 10px 4px #0009;
 }
+
+#mm
+{
+	/*border-right: 10px solid red;*/
+	
+}
+
+#bb
+{
+	width: 30%;
+	background: #3F51B5;
+	animation: swipe 2.5s ease;
+	transform: translate(0px,0) scale(1.12);
+
+}
+#bbb
+{
+	width: 30%;
+	background: #9e9e9e;
+	animation: swipe 2.9s ease;
+	transform: translate(0px,0) scale(1.2);
+
+}
+
 
 .bg2
 {
@@ -336,13 +362,14 @@ body
 
 @keyframes swipe
 {
-	from{width: 90%;}
-	to{width:35%;}
+	0%{width: 90%;}
+	50%{width: 3%;}
+	100%{width:30%;}
 }
 
 @keyframes slideup
 {
-	from{ transform: translate(0,500px); opacity: 0; }
+	from{ transform: translate(0,100px); opacity: 0; }
 	to{ transform: translate(0px,-10px); opacity: 1; }
 }
 

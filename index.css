@@ -15,7 +15,7 @@ body
 .cvr
 {
 	background: linear-gradient(#0009,#000a), url('./pics/back3.jpg');	
-	height: 770px;
+	height: 100vh;
 	background-size: cover;
 	margin: 0 0 0 0;
 	padding: 20px;
@@ -23,6 +23,7 @@ body
 	display: fixed;
 	top: 0;
 	left: 0;
+	overflow: hidden;
 }
 
 .cont
@@ -30,7 +31,7 @@ body
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 600px;
+	height: 100vh;
 	background: ;
 	transition: all 1s;
 	animation: slideup 1s ease forwards;
@@ -39,7 +40,7 @@ body
 .bdy
 {
 	width: 60%;
-	height: 600px;
+	height: 100vh;
 	display: block;
 	text-align: center;
 	font-family: montserrat, roboto, arial;

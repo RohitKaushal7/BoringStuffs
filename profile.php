@@ -4,7 +4,7 @@
 	<title>Profile</title>
 	<link rel="stylesheet" type="text/css" href="../../bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="profile.css">
-	<link rel="stylesheet" type="text/css" href="../../fontawesome-free-5.6.3-web\css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="../../fa-web\css/all.min.css">
 	<script src="../../jquery.min.js"></script>
 
 	<?php
