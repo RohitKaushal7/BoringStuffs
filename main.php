@@ -25,7 +25,7 @@
 
 		$meid = $me['id'];
 
-		$mefind ="select orders.pid,pname,pprice from orders,users,products where buyer= '$meid' and orders.pid=products.pid and users.id='$meid'";
+		$mefind ="select orders.pid,pname,pprice,delivered from orders,users,products where buyer= '$meid' and orders.pid=products.pid and users.id='$meid' and delivered='N' ";
 
 		$pro = mysqli_query($con,$mefind);
 
