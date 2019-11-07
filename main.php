@@ -103,27 +103,27 @@
 				while($row = mysqli_fetch_assoc($res))
 				{
 
-				?>
+			?>
 
 				<div class="item" style="background:url(./pics/<?php echo $row['ppic']?>); background-size: cover;">
-				<div class="details">
-					<h4> <?php echo $row['pname'] ?> </h4>
-					<p> <?php echo $row['pdetails'] ?> </p>
-					<div class="price">&#8377; <?php echo $row['pprice'] ?> </div>
+					<div class="details">
+						<h4> <?php echo $row['pname'] ?> </h4>
+						<p> <?php echo $row['pdetails'] ?> </p>
+						<div class="price">&#8377; <?php echo $row['pprice'] ?> </div>
 
-					<i class="fa fa-cart-plus fa-2x"></i>
+						<i class="fa fa-cart-plus fa-2x"></i>
 
-					<div class="contacth">
-					<h4>Please Contact <small>#<?php echo $row['pid'] ?></small></h4>
-					<span> <?php echo $row['name'] ?> </span><br>
-					<span> <?php echo $row['email'] ?> </span><br>
-					<span> <?php echo $row['mob'] ?> </span><br>
-					<span> <?php echo $row['addr'] ?> </span><button class="btn btn-success" style="margin: 5px 3px 5px 30px;" onclick="window.location= 'order.php?seller=<?php echo $row['id'] ?>&buyer=<?php echo $meid ?>&pid=<?php echo $row['pid'] ?>&pass=<?php echo $me['pass'] ?>';""> Buy</button>
-				</div>
-				</div>
+						<div class="contacth">
+							<h4>Please Contact <small>#<?php echo $row['pid'] ?></small></h4>
+							<span> <?php echo $row['name'] ?> </span><br>
+							<span> <?php echo $row['email'] ?> </span><br>
+							<span> <?php echo $row['mob'] ?> </span><br>
+							<span> <?php echo $row['addr'] ?> </span><button class="btn btn-success" style="margin: 5px 3px 5px 30px;" onclick="window.location= 'order.php?seller=<?php echo $row['id'] ?>&buyer=<?php echo $meid ?>&pid=<?php echo $row['pid'] ?>&pass=<?php echo $me['pass'] ?>';"> Buy</button>
+						</div>
+					</div>
 				
 
-			</div>
+				</div>
 
 
 			<?php }  }?>
